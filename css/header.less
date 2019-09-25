@@ -11,6 +11,8 @@
 
 .headerwrap{
     background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
     .header{
         display: flex;
         align-items: center;
@@ -36,27 +38,39 @@
                     margin-left: 4px;
                 }
             }
-            
         }
-        .right-control{
+        .group-control{
             width: 13%;
             padding-top: 6px;
-            font-size: 0;
-            >i{
-                width: 45.5%;
-                font-size: 16px;
-                text-align: center;
-                box-sizing: border-box;
-                cursor: pointer;
-                &:first-child{
-                    width: 27.25%;
-                    text-align: left;
-                    border-right: 1px solid white;
+            .right-control{
+                font-size: 0;
+                >i{
+                    width: 45.5%;
+                    font-size: 16px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    &:first-child{
+                        width: 27.25%;
+                        text-align: left;
+                        border-right: 1px solid white;
+                    }
+                    &:last-child{
+                        width: 27.25%;
+                        text-align: right;
+                        border-left: 1px solid white;
+                    }
                 }
-                &:last-child{
-                    width: 27.25%;
-                    text-align: right;
-                    border-left: 1px solid white;
+            }
+            .expand-btn{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: white;
+                display: none;
+                color: black;
+                >i{
+
                 }
             }
         }
