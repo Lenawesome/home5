@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet/less" type="text/css" href="css/mixins.less" />
     <link rel="stylesheet/less" type="text/css" href="css/header.less" />
+    <link rel="stylesheet/less" type="text/css" href="css/section2.less" />
     <link rel="stylesheet/less" type="text/css" href="css/responsive.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
@@ -16,53 +16,105 @@
 </head>
 
 <body>
-    <div class="headerwrap">
-        <nav class="header">
-            <div class="logo"><img src="images/Home_5_03.png" alt="logo-image"></div>
-            <div class="menu poppins-font">
-                <a href="#">Home</a>
-                <a href="#">Pages</a>
-                <a href="#">Classes</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Blog</a>
-                <a href="#">Contacts</a>
-            </div>
-            <div class="group-control">
-                <div class="right-control">
-                    <i class="fas fa-search" onclick="searchTab()"></i>
-                    <i class="fas fa-shopping-cart"></i>
-                    <i class="fas fa-user-alt"></i>
+    <!-- Start section 1: header and slider -->
+    <section class="section1">
+        <div class="headerwrap">
+            <nav class="header">
+                <div class="logo"><img src="images/Home_5_03.png" alt="logo-image"></div>
+                <div class="menu poppins-font">
+                    <a href="#">Home</a>
+                    <a href="#">Pages</a>
+                    <a href="#">Classes</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contacts</a>
                 </div>
-                <div class="expand-btn">
-                    <i class="fas fa-list"></i>
+                <div class="group-control">
+                    <div class="right-control">
+                        <i class="fas fa-search" onclick="searchTab()"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-user-alt"></i>
+                    </div>
+                    <div class="expand-btn">
+                        <i class="fas fa-list"></i>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-    <div id="owl-demo" class="owl-carousel owl-theme">
-        <div class="item">
-            <img src="images/img-slide_01.jpg" alt="default-image">
-            <div class="custom-slider-wrapper">
-                <div class="custom-slider-inner">
-                    <div class="custom-slider">
-                        <div class="heading-title poppins-font bold">
-                            <h2>Dumbbells Shop</h2>
+            </nav>
+        </div>
+        <div id="owl-demo" class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="images/img-slide_01.jpg" alt="default-image">
+                <div class="custom-slider-wrapper">
+                    <div class="custom-slider-inner">
+                        <div class="custom-slider">
+                            <div class="heading-title poppins-font bold">
+                                <h2>Dumbbells Shop</h2>
+                            </div>
+                            <div class="sub-title poppins-font bold">
+                                <h3>Best body fitness</h3>
+                            </div>
+                            <div class="description poppins-font">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer
+                            </div>
+                            <button class="poppins-font">Shop now</button>
                         </div>
-                        <div class="sub-title poppins-font bold">
-                            <h3>Best body fitness</h3>
-                        </div>
-                        <div class="description poppins-font">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer
-                        </div>
-                        <button class="poppins-font">Shop now</button>
                     </div>
                 </div>
             </div>
+            <div class="item"><img src="images/img-slide_01.jpg" alt="default-image"></div>
+            <div class="item"><img src="images/img-slide_01.jpg" alt="default-image"></div>
         </div>
-        <div class="item"><img src="images/img-slide_01.jpg" alt="default-image"></div>
-        <div class="item"><img src="images/img-slide_01.jpg" alt="default-image"></div>
-    </div>
+    </section>
+    <!-- End section 1 -->
+
+    <!-- Start section 2 -->
+    <section class="section2">
+        <div class="item order-md-1 order-xs-1"><img src="images/item1_23.jpg" alt=""></div>
+        <div class="item-description-wrapper order-md-3 order-xs-4">
+            <div class="item-description-inner">
+                <div class="item-icon">
+                    <img src="images/item-icon2_26.png" alt="">
+                </div>
+                <div class="item-title poppins-font bold">
+                    Strength
+                </div>
+                <div class="item-description poppins-font">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+            </div>
+        </div>
+        <div class="item order-md-5 order-xs-5"><img src="images/item3_25.png" alt=""></div>
+        <div class="item-description-wrapper order-md-2 order-xs-2">
+            <div class="item-description-inner">
+                <div class="item-icon">
+                    <img src="images/item-icon1_31.png" alt="">
+                </div>
+                <div class="item-title poppins-font bold">
+                    dumbbells
+                </div>
+                <div class="item-description poppins-font">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+            </div>
+        </div>
+        <div class="item order-md-4 order-xs-3"><img src="images/item2_32.jpg" alt=""></div>
+        <div class="item-description-wrapper order-md-6 order-xs-6">
+            <div class="item-description-inner">
+                <div class="item-icon">
+                    <img src="images/item-icon3_34.jpg" alt="">
+                </div>
+                <div class="item-title poppins-font bold">
+                    power rack & cages
+                </div>
+                <div class="item-description poppins-font">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End section 2 -->
     <script src="js/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/slider.js"></script>

@@ -1,32 +1,41 @@
+@import (reference) "mixins.less";
+
 // menu 
-@media screen and (max-width:1190px) and (min-width: 891px){
-    .headerwrap{
+@media screen and (max-width:1190px) and (min-width: 891px) {
+    .headerwrap {
+
         // position: relative;
-        .header{
+        .header {
             width: 95%;
             display: flex;
             justify-content: space-between;
-            .logo{
+
+            .logo {
                 width: auto;
             }
-            .menu{
+
+            .menu {
                 display: flex;
                 justify-content: space-between;
-                >a{
+
+                >a {
                     margin: 0;
                 }
             }
-            .group-control{
-                .right-control{
+
+            .group-control {
+                .right-control {
+
                     // min-width: 152px;
-                    >i{
+                    >i {
                         width: 50% !important;
                         text-align: center !important;
-                        &:first-child{
+
+                        &:first-child {
                             border: none;
                             color: white !important;
                             position: absolute;
-                            right:0;
+                            right: 0;
                             bottom: -60px;
                             color: black;
                             width: 50px !important;
@@ -39,25 +48,30 @@
     }
 }
 
-@media screen and (max-width:1083px) and (min-width:891px){
-    .headerwrap{
-        .header{
+@media screen and (max-width:1083px) and (min-width:891px) {
+    .headerwrap {
+        .header {
             width: 99%;
-            menu{
+
+            menu {
                 width: 70%;
             }
-            .group-control{
-                width:5%;
-                .right-control{
+
+            .group-control {
+                width: 5%;
+
+                .right-control {
                     text-align: center;
-                    >i{
+
+                    >i {
                         width: 100%;
                         border: none;
-                        &:last-child{
+
+                        &:last-child {
                             border: none;
                             color: white !important;
                             position: absolute;
-                            right:0;
+                            right: 0;
                             bottom: -120px;
                             color: black;
                             width: 50px !important;
@@ -69,25 +83,30 @@
         }
     }
 }
-@media screen and (max-width: 890px) and (min-width: 700px){
-    .headerwrap{
-        .header{
+
+@media screen and (max-width: 890px) and (min-width: 700px) {
+    .headerwrap {
+        .header {
             width: 90%;
             display: flex;
             justify-content: space-between;
-            .menu{
+
+            .menu {
                 display: none;
             }
-            .group-control{
+
+            .group-control {
                 display: flex;
                 justify-content: space-between;
                 min-width: 200px;
-                .right-control{
+
+                .right-control {
                     display: flex;
                     align-items: center;
                     min-width: 120px;
                 }
-                .expand-btn{
+
+                .expand-btn {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -97,21 +116,25 @@
     }
 }
 
-@media screen and (max-width: 700px){
-    .headerwrap{
-        .header{
+@media screen and (max-width: 700px) {
+    .headerwrap {
+        .header {
             width: 90%;
             display: flex;
             justify-content: space-between;
-            .menu{
+
+            .menu {
                 display: none;
             }
-            .group-control{
+
+            .group-control {
                 width: auto;
-                .right-control{
+
+                .right-control {
                     display: none;
                 }
-                .expand-btn{
+
+                .expand-btn {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -120,3 +143,95 @@
         }
     }
 }
+
+// end section 1
+
+// section 2
+@media screen and (max-width: 1190px) {
+    .item-description-wrapper {
+        .item-description-inner {
+            .flexCenter();
+            flex-direction: column;
+
+            .item-icon,
+            .item-title,
+            .item-description {
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) and (min-width: 577px) {
+    .order-md-1 {
+        order: 1;
+    }
+
+    .order-md-2 {
+        order: 2
+    }
+
+    .order-md-3 {
+        order: 3;
+    }
+
+    .order-md-4 {
+        order: 4;
+    }
+
+    .order-md-5 {
+        order: 5;
+    }
+
+    .order-md-6 {
+        order: 6;
+    }
+}
+@media screen and (max-width:576px) {
+    .order-xs-1 {
+        order: 1;
+    }
+
+    .order-xs-2 {
+        order: 2
+    }
+
+    .order-xs-3 {
+        order: 3;
+    }
+
+    .order-xs-4 {
+        order: 4;
+    }
+
+    .order-xs-5 {
+        order: 5;
+    }
+
+    .order-xs-6 {
+        order: 6;
+    }
+}
+@media screen and (max-width: 992px) and (min-width: 576px) {
+    .section2 {
+
+        .item,
+        .item-description-wrapper {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .section2{
+        margin-top: 50px;
+        .item,.item-description-wrapper{
+            width: 100%;
+        }
+        .item-description-wrapper{
+            min-height: 230px;
+        }
+    }
+}
+
+// end section 2

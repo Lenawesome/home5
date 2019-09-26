@@ -10,6 +10,8 @@
 .scale(@scaleX;@scaleY){
     transform: scale(@scaleX,@scaleY);
 }
+
+
 // end font-family
 
 // fix-menu
@@ -17,7 +19,7 @@
 .headerwrap {
     background: rgba(0, 0, 0, 0.8);
     position: fixed;
-    z-index: 2;
+    z-index: 10;
     width: 100%;
     @media screen and (max-width: 596px){
         background: transparent;
@@ -167,6 +169,9 @@
                             .heading-title,.sub-title,.description{
                                 margin-bottom: 25px !important;
                             }
+                            .description{
+                                font-size: 14px !important;
+                            }
                             button{
                                 padding: 10px 30px !important;
                             }
@@ -184,6 +189,11 @@
                             }
                             .description{
                                 display: none;
+                            }
+                            button{
+                                font-size: 12px !important;
+                                padding: 5px 15px !important;
+                                margin: 0;
                             }
                         }
                         .heading-title {    
