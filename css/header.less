@@ -1,20 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,800&display=swap');
-
 // font-family
-.poppins-font{
+.poppins-font {
     font-family: 'Poppins', sans-serif;
 }
 
+.bold {
+    font-weight: 700;
+}
+.scale(@scaleX;@scaleY){
+    transform: scale(@scaleX,@scaleY);
+}
 // end font-family
 
 // fix-menu
 
-.headerwrap{
+.headerwrap {
     background: rgba(0, 0, 0, 0.8);
     position: fixed;
-    z-index: 9999;
+    z-index: 2;
     width: 100%;
-    .header{
+    @media screen and (max-width: 596px){
+        background: transparent;
+    }
+    .header {
         display: flex;
         align-items: center;
         width: 1170px;
@@ -22,48 +30,75 @@
         padding: 23px 0;
         font-size: 16px;
         color: white;
-        .logo{
+        @media screen and (max-width: 1083px){
+            padding: 10px 0;
+            .logo,.group-control{
+                .scale(0.8;0.8);
+            }
+        }
+        @media screen and (max-width: 730px){
+
+            width: 100% !important;
+            .logo,.group-control{
+                .scale(0.7;0.7);
+            }
+        }
+        @media screen and (max-width: 596px){
+            .logo,.group-control{
+                .scale(0.5;0.5);
+            }
+        }
+        .logo {
             width: 25%;
         }
-        .menu{
+
+        .menu {
             width: 62%;
             margin-left: -3px;
             position: relative;
             padding-top: 4px;
-            >a{
+
+            >a {
                 margin-right: 47px;
-                line-height: 16px !important; 
+                line-height: 16px !important;
                 text-decoration: none;
-                color:white;
-                &:nth-child(4){
+                color: white;
+
+                &:nth-child(4) {
                     margin-left: 4px;
                 }
             }
         }
-        .group-control{
+
+        .group-control {
             width: 13%;
             padding-top: 6px;
-            .right-control{
+
+            .right-control {
                 font-size: 0;
-                >i{
+
+                >i {
                     width: 45.5%;
                     font-size: 16px;
                     text-align: center;
                     box-sizing: border-box;
                     cursor: pointer;
-                    &:first-child{
+
+                    &:first-child {
                         width: 27.25%;
                         text-align: left;
                         border-right: 1px solid white;
                     }
-                    &:last-child{
+
+                    &:last-child {
                         width: 27.25%;
                         text-align: right;
                         border-left: 1px solid white;
                     }
                 }
             }
-            .expand-btn{
+
+            .expand-btn {
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
@@ -78,8 +113,114 @@
 // end fix-menu
 
 // slider
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
+#owl-demo {
+    .owl-item{
+        .item {
+            position: relative;
+    
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .custom-slider-wrapper{
+                position: absolute;
+                z-index: 3;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                .custom-slider-inner{
+                    width: 1170px;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    @media screen and (max-width: 1800px){
+                        justify-content: center;
+                        width: 100%;
+                    }
+                    @media screen and (max-width: 834px){
+                        align-items: flex-end;
+                        .custom-slider{
+                            width: 450px !important;
+                            text-align: center;
+                        }
+                    }
+                    @media screen and (max-width:596px){
+                        align-items: center;
+                    }
+                    @media screen and (max-width: 400px){
+                        align-items: flex-end;
+                    }
+                    // position: relative;
+                    .custom-slider {
+                        // position: absolute;
+                        // // z-index: 3;
+                        // top: 50%;
+                        // transform: translate(0%,-51.1%);
+                        color: white;
+                        font-size: 60px;
+                        width: 557px;
+                        transform: translate(-3px,-4px);
+                        @media screen and (max-width: 1083px){
+                            font-size:50px;
+                            .heading-title,.sub-title,.description{
+                                margin-bottom: 25px !important;
+                            }
+                            button{
+                                padding: 10px 30px !important;
+                            }
+                        }
+                        @media screen and (max-width:730px){
+                            font-size: 40px;
+                            .heading-title,.sub-title,.description{
+                                margin-bottom: 15px !important;
+                            }
+                        }
+                        @media screen and (max-width: 596px) {
+                            font-size: 20px;
+                            .heading-title,.sub-title{
+                                margin-bottom: 15px !important;
+                            }
+                            .description{
+                                display: none;
+                            }
+                        }
+                        .heading-title {    
+                            font-size: 1em;
+                            margin-bottom: 17px;
+                        }
+            
+                        .sub-title {
+                            font-size: 2/3em;
+                            margin-bottom: 30px;
+                        }
+            
+                        .description {
+                            font-size: 7/30em;
+                            line-height: 23px;
+                            font-weight: 400;
+                            padding-left: 3px;
+                            margin-bottom: 56px;
+                            // text-indent: 3px;
+                        }
+            
+                        button {
+                            margin-left: 3px;
+                            background: transparent;
+                            text-transform: uppercase;
+                            border: 1px solid white;
+                            outline: none;
+                            color: white;
+                            padding: 14px 46px;
+                            box-sizing: border-box;
+                            font-size: 7/30em;
+                            cursor: pointer;
+                        }
+            
+                    }
+                }
+            }
+        }
+    }
 }
